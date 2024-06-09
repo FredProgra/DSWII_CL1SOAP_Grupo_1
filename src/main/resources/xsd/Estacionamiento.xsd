@@ -1,0 +1,33 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.cibertec.edu.pe/ws/objects"
+           targetNamespace="http://www.cibertec.edu.pe/ws/objects"
+           elementFormDefault="qualified">
+
+    <xs:element name="getEstacionamientoMontoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Monto" type="xs:double" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getEstacionamientoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="estacionamiento" type="tns:estacionamiento" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="estacionamiento">
+        <xs:sequence>
+            <xs:element name="tarifa" type="xs:int" />
+            <xs:element name="hora" type="xs:double" />
+
+
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+
+</xs:schema>
