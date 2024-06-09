@@ -1,0 +1,33 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.cibertec.edu.pe/ws/objects"
+           targetNamespace="http://www.cibertec.edu.pe/ws/objects"
+           elementFormDefault="qualified">
+
+    <xs:element name="getDniRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="edad" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getDniResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="dni" type="tns:dni" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="dni">
+        <xs:sequence>
+            <xs:element name="nacimiento" type="xs:int" />
+
+
+
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+
+</xs:schema>
